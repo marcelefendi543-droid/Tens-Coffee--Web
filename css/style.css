@@ -1,0 +1,933 @@
+/* 1. Variabel Warna Utama (Proporsi 55 / 15 / 15 / 10 / 5) */
+:root {
+  --blue: #3E63E3;   /* biru utama (55%) */
+  --blue2: #3452BC;  /* biru pendukung (15%) */
+  --off: #F2F1EE;    /* off-white latar (15%) */
+  --beige: #CDBA9C;  /* beige (10%) */
+  --brown: #714A35;  /* cokelat aksen hangat (5%) */
+}
+
+/* 2. Reset & Gaya Dasar Body */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  background: var(--off);
+  color: var(--brown);
+  line-height: 1.5;
+}
+
+/* 3. Hierarki Tipografi Sesuai Slide Moodboard */
+.logo {
+  font-family: 'Lilita One', cursive;
+  letter-spacing: 0.5px;
+}
+
+h1, h2, .main-header {
+  font-family: 'Knewave', cursive;
+  font-weight: 400;
+}
+
+h3, .subheader {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.harga-promo {
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+small, .info-kecil {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* 4. Komponen Berulang (Tombol Pill, Kartu Putih, Chip Kategori) */
+.btn {
+  display: inline-block;
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-wa {
+  background: var(--blue);
+  color: #fff;
+}
+
+.btn-wa:hover {
+  background: var(--blue2);
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.chip {
+  border: 1.5px solid var(--blue);
+  border-radius: 999px;
+  padding: 6px 16px;
+  background: #fff;
+  color: var(--blue);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.chip.on {
+  background: var(--blue);
+  color: #fff;
+}
+
+/* =========================================
+   LANGKAH 3: LAYOUT & HALAMAN BERANDA
+   ========================================= */
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 48px 0;
+}
+
+.section-title {
+  font-size: 28px;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+
+.section-desc {
+  margin-bottom: 24px;
+}
+
+.section-head-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.link-biru {
+  color: var(--blue);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Navbar Sticky */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  padding: 12px 0;
+}
+
+.nav-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--brown);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.nav-links a:hover {
+  color: var(--blue);
+}
+
+/* Hero Split */
+.hero {
+  background: var(--blue);
+  color: #fff;
+  padding: 48px 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.hero-kiri h1 {
+  font-size: 40px;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.hero-sub {
+  font-size: 16px;
+  margin-bottom: 24px;
+  opacity: 0.95;
+}
+
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn-kuning {
+  background: #FFD43B;
+  color: var(--brown);
+}
+
+.btn-putih {
+  background: #fff;
+  color: var(--blue);
+}
+
+.hero-kanan {
+  color: var(--brown);
+  padding: 24px;
+}
+
+.badge-kecil {
+  display: inline-block;
+  background: var(--off);
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 13px;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.harga-besar {
+  font-family: 'Anton', sans-serif;
+  font-size: 36px;
+  color: var(--blue);
+  margin: 8px 0 4px;
+}
+
+/* Grid Sistem (Desktop -> Tablet -> HP) */
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.paket-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.tag-porsi {
+  align-self: flex-start;
+  background: var(--blue);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.paket-card .harga-promo {
+  font-size: 22px;
+  color: var(--blue);
+  margin-top: 4px;
+}
+
+.fitur-card {
+  padding: 20px;
+}
+
+.nomor-bulat {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* Ulasan Google (Kartu Beige) */
+.card-beige {
+  background: var(--beige);
+  color: var(--brown);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bintang {
+  color: #714A35;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+/* Cabang (Tombol Pill) */
+.cabang-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pill {
+  display: inline-block;
+  background: #fff;
+  color: var(--blue);
+  border: 1.5px solid var(--blue);
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.pill:hover {
+  background: var(--blue);
+  color: #fff;
+}
+
+/* FAQ Accordion */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  padding: 16px 20px;
+}
+
+.faq-item summary {
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-item p {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--off);
+}
+
+/* Footer */
+.footer {
+  background: var(--brown);
+  color: #fff;
+  padding: 40px 0 80px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1.5fr 1fr;
+  gap: 24px;
+}
+
+.footer h3 {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.sosmed-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sosmed-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Tombol WA Sticky (Sembunyi di Desktop) */
+.wa-sticky {
+  display: none;
+}
+
+/* Responsif Tablet */
+@media (max-width: 960px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsif HP (<= 720px) */
+@media (max-width: 720px) {
+  .nav-links,
+  .nav-cta {
+    display: none;
+  }
+
+  .hero-grid,
+  .grid-4,
+  .grid-3,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-kiri h1 {
+    font-size: 32px;
+  }
+
+  .wa-sticky {
+    display: block;
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    background: #1FA85A;
+    color: #fff;
+    text-align: center;
+    z-index: 60;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* =========================================
+   LANGKAH 4: HALAMAN MENU
+   ========================================= */
+.search-wrap {
+  margin-bottom: 16px;
+}
+
+.search {
+  width: 100%;
+  max-width: 480px;
+  padding: 12px 18px;
+  border: 1.5px solid #d6d3cd;
+  border-radius: 999px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  background: #fff;
+  color: var(--brown);
+  outline: none;
+}
+
+.search:focus {
+  border-color: var(--blue);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+/* Grid Menu: 3 Kolom Desktop, 2 Tablet, 1 HP */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  min-height: 40px;
+}
+
+/* Banner Bawah Halaman Menu */
+.banner-tanya {
+  margin-top: 40px;
+  background: var(--blue);
+  color: #fff;
+  border-radius: 16px;
+  padding: 28px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.banner-tanya h3 {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.banner-tanya p {
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+@media (max-width: 960px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================
+   LANGKAH 5: GAYA KARTU MENU
+   ========================================= */
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--brown);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.menu-card.habis {
+  opacity: 0.75;
+}
+
+.foto {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: var(--beige);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  padding: 0;
+}
+
+.foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.menu-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.badge {
+  align-self: flex-start;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+.badge-cokelat {
+  background: var(--brown);
+}
+
+.badge-biru {
+  background: var(--blue);
+}
+
+.menu-card h3 {
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+.menu-desc {
+  font-size: 13px;
+  opacity: 0.85;
+  margin-bottom: 14px;
+  flex: 1;
+}
+
+.menu-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  border-top: 1px solid var(--off);
+}
+
+.harga {
+  font-weight: 700;
+  color: var(--blue);
+  font-size: 15px;
+}
+
+.stok-label {
+  font-weight: 600;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.stok-label.tersedia {
+  background: #e6f7ed;
+  color: #15803d;
+}
+
+.stok-label.kosong {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.kosong-msg {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 32px;
+  background: #fff;
+  border-radius: 16px;
+}
+
+/* =========================================
+   LANGKAH 6: DETAIL PRODUK
+   ========================================= */
+.breadcrumb {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.breadcrumb a {
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.detail-foto {
+  aspect-ratio: 1 / 1;
+  margin-bottom: 0;
+}
+
+.detail-info {
+  padding: 24px;
+}
+
+.opsi-grup {
+  margin-bottom: 18px;
+}
+
+.opsi-label {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.qty-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  border: 1.5px solid var(--blue);
+  border-radius: 999px;
+  padding: 4px 12px;
+}
+
+.qty-btn {
+  background: none;
+  border: none;
+  color: var(--blue);
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0 6px;
+}
+
+.qty-val {
+  font-weight: 700;
+  min-width: 20px;
+  text-align: center;
+}
+
+.total-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  margin-bottom: 16px;
+  border-top: 1px solid var(--off);
+  border-bottom: 1px solid var(--off);
+}
+
+@media (max-width: 720px) {
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================
+   LANGKAH 8: KALKULATOR ESTIMASI
+   ========================================= */
+.kalk-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.kalk-kiri,
+.kalk-kanan {
+  padding: 24px;
+}
+
+.baris-list,
+.addon-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.kalk-row {
+  display: grid;
+  grid-template-columns: 1fr 72px 86px 36px;
+  gap: 8px;
+  align-items: center;
+}
+
+.addon-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.kalk-input {
+  padding: 8px 10px;
+  border: 1.5px solid #d6d3cd;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  background: #fff;
+  color: var(--brown);
+  width: 100%;
+}
+
+.kalk-input:focus {
+  outline: none;
+  border-color: var(--blue);
+}
+
+.btn-dashed {
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  border: 1.5px dashed var(--blue);
+  border-radius: 12px;
+  background: transparent;
+  color: var(--blue);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-dashed:hover {
+  background: var(--off);
+}
+
+.btn-hapus {
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 8px;
+  background: #fee2e2;
+  color: #b91c1c;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ringkas-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--off);
+  font-size: 15px;
+}
+
+.ringkas-total {
+  background: var(--off);
+  padding: 16px;
+  border-radius: 12px;
+  margin: 16px 0;
+  text-align: center;
+}
+
+.btn-wa-hijau {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: #1FA85A;
+  color: #fff;
+}
+
+.btn-wa-hijau:hover {
+  background: #188a49;
+}
+
+@media (max-width: 720px) {
+  .kalk-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kalk-row {
+    grid-template-columns: 1fr 64px 72px 32px;
+    gap: 6px;
+  }
+}
+
+/* =========================================
+   LANGKAH 9: MODE RINGAN
+   ========================================= */
+.bar-lambat {
+  background: #FFD43B;
+  color: var(--brown);
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  text-align: center;
+}
+
+.bar-lambat[hidden] {
+  display: none;
+}
+
+.bar-lambat button {
+  background: var(--brown);
+  color: #fff;
+  border: 0;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-ringan-footer {
+  margin-top: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-ringan-footer:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Perilaku Saat Mode Ringan Aktif */
+body.ringan,
+body.ringan .logo,
+body.ringan h1,
+body.ringan h2,
+body.ringan h3,
+body.ringan .harga-promo,
+body.ringan .harga-besar,
+body.ringan small {
+  font-family: system-ui, Arial, sans-serif !important;
+}
+
+body.ringan * {
+  animation: none !important;
+  transition: none !important;
+}
+
+body.ringan .foto img {
+  display: none;
+}
+
+/* =========================================
+   KARTU & TOMBOL PAKET SIAP PESAN
+   ========================================= */
+.paket-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.paket-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.paket-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 12px;
+  border-top: 1.5px solid var(--off);
+}
+
+.btn-paket {
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  padding: 10px 14px;
+}
+
+/* =========================================
+   IKON LOGO DI NAVBAR KIRI ATAS
+   ========================================= */
+.navbar .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
