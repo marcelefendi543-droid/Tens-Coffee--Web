@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tens Coffee — Es Krim Karambol &amp; Kopi untuk Acaramu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Knewave&family=Lilita+One&family=Open+Sans:wght@400;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Bar Koneksi Lambat (Otomatis muncul jika jaringan lambat) -->
+  <div id="barLambat" class="bar-lambat" hidden>
+    <span>Koneksi internet terdeteksi lambat.</span>
+    <button type="button" id="btnAktifkanRingan">Aktifkan Mode Ringan</button>
+  </div>
+
+  <!-- 1. Navbar Sticky -->
+  <header class="navbar">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo">
+        <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="100" height="100" rx="18" fill="#3E63E3"/>
+          <text x="50" y="54" fill="#ffffff" font-family="'Fredoka', sans-serif" font-weight="700" font-size="38" text-anchor="middle" letter-spacing="-1">tens</text>
+          <text x="52" y="75" fill="#ffffff" font-family="'Comfortaa', sans-serif" font-weight="600" font-size="16" text-anchor="middle">Coffee</text>
+        </svg>
+        <span>tens coffee</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Beranda</a>
+        <a href="menu.html">Menu</a>
+        <a href="#kalkulator">Kalkulator</a>
+        <a href="#lokasi">Lokasi</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn btn-wa nav-cta" target="_blank" rel="noopener" href="https://wa.me/6281234567890?text=Halo%20Tens%20Coffee%2C%20saya%20mau%20tanya%20menu.">Pesan via WhatsApp</a>
+    </div>
+  </header>
+
+  <!-- 2. Hero Split -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-kiri">
+        <h1>Es krim karambol &amp; kopi untuk acaramu</h1>
+        <p class="hero-sub">Pilihan menu favorit mahasiswa &amp; panitia acara. Hitung estimasi porsi dalam hitungan detik, pesan langsung lewat WhatsApp.</p>
+        <div class="hero-cta">
+          <a href="menu.html" class="btn btn-kuning">Lihat Menu</a>
+          <a href="#kalkulator" class="btn btn-putih">Hitung Estimasi</a>
+        </div>
+      </div>
+
+      <div class="card hero-kanan">
+        <span class="badge-kecil">Estimasi cepat</span>
+        <p class="harga-besar">Rp 3.600.000</p>
+        <p class="info-kecil">Contoh paket 200 porsi (Es Krim Karambol &amp; Tea + Add-on)</p>
+        <a href="#kalkulator" class="btn btn-wa" style="width: 100%; text-align: center; margin-top: 12px;">Buka Kalkulator</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Paket Siap Pesan (4 Kartu Interaktif) -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Paket siap pesan</h2>
+      <p class="section-desc">Cocok untuk rapat kampus, seminar, hingga acara kantor. Klik pesan untuk langsung terhubung ke WhatsApp.</p>
+      <div class="grid-4">
+        <div class="card paket-card">
+          <div>
+            <span class="tag-porsi">50 Porsi</span>
+            <h3 style="margin-top: 8px;">Paket Rapat Hemat</h3>
+            <p>50 Es Krim Karambol (R) + free choco sauce.</p>
+          </div>
+          <div class="paket-footer">
+            <p class="harga-promo">Rp 700rb</p>
+            <a class="btn btn-wa btn-paket" target="_blank" rel="noopener"
+               href="https://wa.me/6281234567890?text=Halo%20Tens%20Coffee%2C%20saya%20tertarik%20memesan%20Paket%20Rapat%20Hemat%20(50%20Porsi)%20-%20Estimasi%20Rp700.000."
+               data-paket="Paket Rapat Hemat (50 Porsi)"
+               data-detail="50 Es Krim Karambol (R) + free choco sauce"
+               data-harga="Rp700.000">
+              Pesan via WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="card paket-card">
+          <div>
+            <span class="tag-porsi">100 Porsi</span>
+            <h3 style="margin-top: 8px;">Paket Seminar Kampus</h3>
+            <p>50 Es Krim Karambol (R) + 50 Lychee Tea (R).</p>
+          </div>
+          <div class="paket-footer">
+            <p class="harga-promo">Rp 1,45 jt</p>
+            <a class="btn btn-wa btn-paket" target="_blank" rel="noopener"
+               href="https://wa.me/6281234567890?text=Halo%20Tens%20Coffee%2C%20saya%20tertarik%20memesan%20Paket%20Seminar%20Kampus%20(100%20Porsi)%20-%20Estimasi%20Rp1.450.000."
+               data-paket="Paket Seminar Kampus (100 Porsi)"
+               data-detail="50 Es Krim Karambol (R) + 50 Lychee Tea (R)"
+               data-harga="Rp1.450.000">
+              Pesan via WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="card paket-card">
+          <div>
+            <span class="tag-porsi">150 Porsi</span>
+            <h3 style="margin-top: 8px;">Paket Komunitas</h3>
+            <p>100 Es Krim Karambol (R) + 50 Aren Latte (R) + topping.</p>
+          </div>
+          <div class="paket-footer">
+            <p class="harga-promo">Rp 2,25 jt</p>
+            <a class="btn btn-wa btn-paket" target="_blank" rel="noopener"
+               href="https://wa.me/6281234567890?text=Halo%20Tens%20Coffee%2C%20saya%20tertarik%20memesan%20Paket%20Komunitas%20(150%20Porsi)%20-%20Estimasi%20Rp2.250.000."
+               data-paket="Paket Komunitas (150 Porsi)"
+               data-detail="100 Es Krim Karambol (R) + 50 Aren Latte (R) + topping"
+               data-harga="Rp2.250.000">
+              Pesan via WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="card paket-card">
+          <div>
+            <span class="tag-porsi">200 Porsi</span>
+            <h3 style="margin-top: 8px;">Paket Acara Besar</h3>
+            <p>150 Es Krim Karambol (R) + 50 Lychee Tea (R) + 100 Choco Sauce.</p>
+          </div>
+          <div class="paket-footer">
+            <p class="harga-promo">Rp 3,35 jt</p>
+            <a class="btn btn-wa btn-paket" target="_blank" rel="noopener"
+               href="https://wa.me/6281234567890?text=Halo%20Tens%20Coffee%2C%20saya%20tertarik%20memesan%20Paket%20Acara%20Besar%20(200%20Porsi)%20-%20Estimasi%20Rp3.350.000."
+               data-paket="Paket Acara Besar (200 Porsi)"
+               data-detail="150 Es Krim Karambol (R) + 50 Lychee Tea (R) + 100 Choco Sauce"
+               data-harga="Rp3.350.000">
+              Pesan via WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Tiga Hal dari Tens -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Kenapa pilih Tens Coffee?</h2>
+      <div class="grid-3">
+        <div class="card fitur-card">
+          <span class="nomor-bulat">1</span>
+          <h3>Es krim karambol</h3>
+          <p>Menu best seller dengan varian Original dan Choco. Bisa tambah add-on choco sauce, fruity loops, atau regal biscuit.</p>
+        </div>
+        <div class="card fitur-card">
+          <span class="nomor-bulat">2</span>
+          <h3>Dekat kampus</h3>
+          <p>Hadir di 4 cabang strategis di sekitar area kampus Jabodetabek, mudah dijangkau untuk beli langsung maupun pengiriman acara.</p>
+        </div>
+        <div class="card fitur-card">
+          <span class="nomor-bulat">3</span>
+          <h3>Varian menu banyak</h3>
+          <p>Lengkap mulai dari Coffee, Non-Coffee, Matcha, Dessert, Tea, Tenseliter (botol 1 liter), hingga Pasta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Placeholder Anchor Kalkulator (Akan diisi Anggota 4 di Langkah 8) -->
+  <!-- Kalkulator Estimasi Pesanan (Langkah 8) -->
+  <section id="kalkulator" class="section">
+    <div class="container">
+      <h2 class="section-title">Kalkulator Estimasi Pesanan</h2>
+      <p class="section-desc">Simulasikan kebutuhan porsi dan add-on untuk acaramu dalam hitungan detik.</p>
+
+      <div class="kalk-grid">
+        <!-- Kolom Kiri: Daftar Menu & Add-on -->
+        <div class="card kalk-kiri">
+          <h3 style="margin-bottom: 12px;">Daftar Menu</h3>
+          <div id="daftarBaris" class="baris-list"></div>
+
+          <button type="button" id="btnTambahBaris" class="btn-dashed">+ Tambah menu</button>
+
+          <hr style="border: 0; border-top: 1.5px solid var(--off); margin: 20px 0;">
+
+          <h3 style="margin-bottom: 4px;">Add-on (Opsional)</h3>
+          <small style="display: block; margin-bottom: 12px; opacity: 0.85;">Masukkan jumlah porsi add-on yang diinginkan.</small>
+          <div id="daftarAddon" class="addon-list"></div>
+        </div>
+
+        <!-- Kolom Kanan: Kartu Ringkasan -->
+        <div class="card kalk-kanan">
+          <h3 style="margin-bottom: 16px;">Ringkasan Estimasi</h3>
+
+          <div class="ringkas-row">
+            <span>Total Porsi</span>
+            <strong id="ringkasPorsi">200 porsi</strong>
+          </div>
+          <div class="ringkas-row">
+            <span>Biaya Add-on</span>
+            <strong id="ringkasAddon">Rp200.000</strong>
+          </div>
+
+          <div class="ringkas-total">
+            <span>Estimasi Total</span>
+            <p id="ringkasTotal" class="harga-besar" style="margin: 4px 0 0;">Rp 3,6 jt</p>
+            <small id="ringkasDetail" style="opacity: 0.85;">(Rp3.600.000)</small>
+          </div>
+
+          <a id="btnKalkWA" class="btn btn-wa-hijau" target="_blank" rel="noopener" href="#">
+            Kirim Estimasi via WhatsApp
+          </a>
+
+          <small style="display: block; margin-top: 12px; opacity: 0.85; line-height: 1.4;">
+            Hanya estimasi, tanpa checkout. Harga final dikonfirmasi admin.
+          </small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Ulasan Google (3 Kartu Beige) -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head-flex">
+        <h2 class="section-title">Kata mereka tentang Tens Coffee</h2>
+        <a class="link-biru" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Tens+Coffee">Lihat semua ulasan →</a>
+      </div>
+      <div class="grid-3">
+        <!-- Ulasan 1: Kutipan asli dari ulasan pengunjung Kantin Vokasi UI (Lemon8) -->
+        <div class="card card-beige">
+          <p class="bintang">★★★★★</p>
+          <p>"Pengalaman ngopi di Tens Coffee kantin Vokasi UI Depok: di sini ada kopi 12K yang juara, aren latte less sugar, sampai ice cream Karambol best."</p>
+          <small>— @dumpside, Ulasan Pengunjung Vokasi UI</small>
+        </div>
+
+        <!-- Ulasan 2: Ringkasan ulasan pelanggan & menu andalan (Lemon8 Culinary) -->
+        <div class="card card-beige">
+          <p class="bintang">★★★★★</p>
+          <p>"Menu andalan di Tens Coffee adalah Karambol Ice Cream dan Aren Latte yang harganya ramah di kantong mahasiswa, cocok buat tempat nongkrong dekat kampus."</p>
+          <small>— Ulasan Kuliner Depok &amp; Kampus UI</small>
+        </div>
+
+        <!-- Ulasan 3: Tempel 1 ulasan asli langsung dari Google Maps Tens Coffee -->
+        <div class="card card-beige">
+          <p class="bintang">★★★★★</p>
+          <p>"Kopi nya enak creeamyyyyy cheesecake nya beneran 10/10 endesssss"</p>
+          <small>— Ulasan Pengunjung Blok M UNJ</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Cabang (7 Tombol Pill ke Google Maps) -->
+  <section id="lokasi" class="section">
+    <div class="container">
+      <h2 class="section-title">Lokasi 4 Cabang Kami</h2>
+      <p class="section-desc">Klik nama cabang untuk membuka petunjuk arah di Google Maps.</p>
+      <div class="cabang-wrap">
+        <a class="pill" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Tens+Coffee+Kantin+Vokasi+UI">Kantin Vokasi UI</a>
+        <a class="pill" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Tens+Coffee+Margonda+Raya">Margonda Raya</a>
+        <a class="pill" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Tens+Coffee+Blok+M+UNJ">Blok M UNJ</a>
+        <a class="pill" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Tens+Coffee+Science+Techno+Park+UI">Science Techno Park UI</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. FAQ (<details><summary>) -->
+  <section id="faq" class="section">
+    <div class="container">
+      <h2 class="section-title">Pertanyaan yang Sering Diajukan (FAQ)</h2>
+      <div class="faq-list">
+        <details class="card faq-item">
+          <summary>Bagaimana cara pesan untuk acara atau jumlah banyak?</summary>
+          <p>Kamu bisa menghitung estimasi biaya lewat kalkulator di website ini, lalu klik tombol "Pesan via WhatsApp" untuk terhubung langsung dengan admin kami.</p>
+        </details>
+        <details class="card faq-item">
+          <summary>Apakah bisa beli langsung di kantin?</summary>
+          <p>Bisa banget! Kamu dapat datang langsung ke salah satu dari 7 cabang Tens Coffee terdekat untuk pembelian satuan maupun langsung di tempat.</p>
+        </details>
+        <details class="card faq-item">
+          <summary>Apakah harga di kalkulator sudah final?</summary>
+          <p>Harga di kalkulator adalah estimasi awal berdasarkan menu dan add-on yang dipilih. Harga final dan biaya pengiriman akan dikonfirmasi admin lewat chat WhatsApp.</p>
+        </details>
+        <details class="card faq-item">
+          <summary>Jam buka tiap cabang pukul berapa?</summary>
+          <p>Cabang area kantin kampus umumnya buka Senin–Jumat pukul 08.00–17.00 WIB, sedangkan cabang non-kantin (seperti Margonda Raya) buka setiap hari pukul 10.00–22.00 WIB.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <span class="logo" style="font-size: 24px; color: #fff;">tens coffee</span>
+        <p style="margin-top: 8px; opacity: 0.9;">Es krim karambol &amp; kopi favorit mahasiswa dan acaramu.</p>
+      </div>
+      <div>
+        <h3>Cabang Kami</h3>
+        <p class="info-kecil">Kantin Vokasi UI • Margonda Raya • Blok M UNJ • Science Techno Park UI</p>
+      </div>
+      <div>
+        <h3>Ikuti Kami</h3>
+        <div class="sosmed-links">
+          <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://wa.me/6281234567890?text=Halo%20Tens%20Coffee%2C%20saya%20mau%20tanya%20menu." target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+        <button type="button" id="btnModeRingan" class="btn-ringan-footer">Mode Ringan: Nonaktif</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 9. Tombol WhatsApp Sticky Khusus HP -->
+  <a class="btn wa-sticky" target="_blank" rel="noopener" href="https://wa.me/6281234567890?text=Halo%20Tens%20Coffee%2C%20saya%20mau%20tanya%20menu.">
+    Pesan via WhatsApp
+  </a>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
